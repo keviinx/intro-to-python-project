@@ -7,6 +7,7 @@ Repo for the project based approach of Intro to Python Bootcamp.
   - [Week 1](#week-1)
   - [Week 2](#week-2)
   - [Week 3](#week-3)
+  - [Week 4](#week-4)
 
 ## Introduction
 
@@ -128,4 +129,40 @@ while current_round != number_of_rounds: # while loop with condition
 
 # display whether player wins
 print("Player win status: " + str(is_player_win)) #this will print True, we have to typecast to string
+```
+
+## Week 4
+
+Continuing from previous week's lesson, we are going to import the random module so that the computer will choose rock, paper or scissors random instead of just returning one choice(even though we know that nothing beats rock).
+
+Code snippet:
+
+```python
+from random import randint
+
+def computer_play():
+  value = randint(1, 3)
+  if value == 1:
+    return "rock"
+  elif value == 2:
+    return "paper"
+  else: # value is 3
+    return "scissors"
+
+computer_choice = computer_play()
+print("Computer's choice: " + computer_choice)
+```
+
+We can also get the player input instead of using a fix choice(which have been paper up to this point).
+
+Code snippet:
+
+```python
+player_choice = (input("Enter a choice (rock, paper, scissors): ").lower()) # lower to make input lowercase
+print(player_choice) # to check the player's input
+```
+
+We can now then introduce the handling for who wins or loses the round because the choices by both the player and the computer is not fixed anymore.
+
+```python
 ```
